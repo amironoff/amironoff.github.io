@@ -27,7 +27,7 @@ kramdown:
   enable_coderay: false
 # Build settings
 markdown: kramdown
-theme: leonids
+#theme: leonids
 gems:
   - jekyll-feed
 exclude:
