@@ -3,8 +3,8 @@
 # Site wide configuration
 ####################################
 #
-title:       "Andrey codes"
-description: 'Insights in .NET, Machine Learning and software product development.'
+title:       "Andrey codes. Sometimes he writes about it."
+description: 'Insights in .NET, machine learning and software product development.'
 # the base hostname & protocol for your site
 url:         https://amironoff.github.io
 
