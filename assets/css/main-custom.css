@@ -5,16 +5,17 @@
 .post-meta .post-cat {
     color: black;
 }
-h4{
-	text-decoration: underline;
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    font-weight: inherit;
+    color: #2b6cc2;
 }
 a {
     color: black;
 
 }
-a:hover, a:focus { color: black; text-decoration: underline; }
+a:hover, a:focus { color: #2b6cc2; text-decoration: underline; }
 .nav-list .nav-item a {
-    color: black;
+    color: #2b6cc2;
 }
 .btn {
     color: black;
