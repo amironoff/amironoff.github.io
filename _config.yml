@@ -40,7 +40,7 @@ exclude:
 #
 owner:
   name: Andrey Mironoff
-  avatar: #avatar.jpg
+  avatar: avatar.jpg
   job: "Programmer/Entrepreneur"
   bio: #"I code stuff. That involves using C#, .NET & Python, applying machine learning to build NLP solutions, and sometimes building a company from scratch."
   email: #mail@mail.com

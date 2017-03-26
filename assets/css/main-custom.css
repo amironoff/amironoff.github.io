@@ -1,9 +1,9 @@
-.cover { background-color: white; }
-.cover-card .author_name { text-transform: none; color: black; }
-.cover-card .author_job { color: black; }
+.cover {background-color: #28282B;}
+.cover-card .author_name { text-transform: none; color: #BDC3C1; }
+.cover-card .author_job { color:  #BDC3C1; }
 .post-meta .post-date { color: #999 }
 .post-meta .post-cat {
-    color: black;
+    color: #14629B;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     font-weight: inherit;
@@ -14,8 +14,13 @@ a {
 
 }
 a:hover, a:focus { color: #2b6cc2; text-decoration: underline; }
+.nav-list .nav-item {
+    color: #BDC3C1;
+    font-size: 100%;
+}
 .nav-list .nav-item a {
     color: #2b6cc2;
+    font-size: 100%;
 }
 .btn {
     color: black;
@@ -29,12 +34,37 @@ code {
     color: black;
 }
 .social-links ul li a.social-link-item {
-    color: black;
+    color: #BDC3C1;
 }
 footer .heart-icon {
     text-shadow: none;
 }
-# highlighter
+
+@media only screen and (min-width: 992px) {
+section.post {
+    width: 70%;
+}
+.post-image-feature {
+    width: 70%;
+}
+#post {
+    width: 70%;
+}
+}
+
+.post-title{
+    font-size:24px;
+}
+.post-description {
+    font-size:17px;
+}
+
+.post-content > p {
+    font-size:17px;
+}
+
+
+#highlighter
 .highlight  { background: #ffffff; }
 .highlight .c { color: #999988; font-style: italic } /* Comment */
 .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
