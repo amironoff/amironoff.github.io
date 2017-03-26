@@ -3,23 +3,36 @@
 .cover-card .author_job { color: black; }
 .post-meta .post-date { color: #999 }
 .post-meta .post-cat {
-    color: #2b6cc2;
+    color: black;
+}
+h4{
+	text-decoration: underline;
 }
 a {
-    color: #2b6cc2;
+    color: black;
+
 }
-a:hover, a:focus { color: #2b6cc2; text-decoration: underline; }
+a:hover, a:focus { color: black; text-decoration: underline; }
 .nav-list .nav-item a {
-    color: #2b6cc2;
+    color: black;
 }
+.btn {
+    color: black;
+    background-color: white;
+    border-color: black;
+}
+.btn:visited { color: black; border-color: black; }
+.btn:hover { background-color: black; color: white; border-color: black; }
 .nav-list .nav-item a:hover, .nav-list .nav-item a:focus { color: #2b6cc2; }
 code {
-    color: #101094;
+    color: black;
 }
 .social-links ul li a.social-link-item {
-    color: #2b6cc2;
+    color: black;
 }
-
+footer .heart-icon {
+    text-shadow: none;
+}
 # highlighter
 .highlight  { background: #ffffff; }
 .highlight .c { color: #999988; font-style: italic } /* Comment */
