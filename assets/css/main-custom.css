@@ -50,6 +50,11 @@ section.post {
 #post {
     width: 70%;
 }
+
+img{
+    max-width: 140%
+}
+
 }
 
 .post-title{
@@ -59,8 +64,13 @@ section.post {
     font-size:17px;
 }
 
+#post {
+    text-align: justify
+}
+
 .post-content > p {
     font-size:17px;
+    text-align: justify
 }
 
 
