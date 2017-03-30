@@ -12,7 +12,7 @@ image:
   feature: violin-plot/violin-plot-vs-boxplot.jpg
 ---
 
-Say you are analyzing customer churn. You want to visualize the distribution 
+Say you are analyzing customer churn of a telecom operator. You want to visualize the distribution 
 of total phone call length across those customers who stayed and those who didn't.
 You think of using the good old Box and Whisker plot. But that doesn't give you the probability density of the variable. 
 What do you do?
