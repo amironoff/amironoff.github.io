@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Visualizing data with Violin Plots"
-excerpt: "Say you are analyzing customer churn. You want to visualize the distribution 
+excerpt: "Say you are analyzing customer churn of a telecom operator. You want to visualize the distribution 
 of total phone call length across those customers who stayed and those who didn't.
 You think of using the good old Box and Whisker plot. But that doesn't give you the probability density of the variable. 
 What do you do?"
@@ -9,26 +9,30 @@ category: Machine Learning
 tags: [exploratory-data-analysis, plot, seaborn]
 comments: true
 image:
-  feature: violin-plot/violin-plot-vs-boxplot.jpg
+  feature: violin-plot/violin-cello.jpg
 ---
 
-Say you are analyzing customer churn of a telecom operator. You want to visualize the distribution 
-of total phone call length across those customers who stayed and those who didn't.
+<p>
+Say you are analyzing customer churn of a telecom operator. You hypothesize that just maybe 
+total phone call length is correlated with customer churn, so you want to plot it.
 You think of using the good old Box and Whisker plot. But that doesn't give you the probability density of the variable. 
 What do you do?
+</p>
 
 ## Violin Plot
-
+<p>
 A violin plot allows displaying _both_ distribution _and_ probability density of a numerical variable.  
 It is a combination of a Box Plot and a Density Plot that is rotated to show data distribution [[1]].
+</p>
 
 ## A Python example
-
+<p>
 Let's plot an example using Python, Jupyter, Pandas [[2]] and Seaborn [[3]]. We'll take this [[4]] telecom churn dataset
 and plot `total day minutes` against the target variable. To show what a violin plot brings to the table,
 let's build both a box plot and a violin plot side-by-side,
 so that you can compare the descriptive power of each.
-
+</p>
+<p>
 {% highlight python %}
 
 %pylab inline
@@ -43,7 +47,8 @@ sns.violinplot(x='churn', y='total day minutes', data=df, ax=axes[1]);
 {% endhighlight %}
 
 Here is the result:
-<br />
+</p>
+
 ![Box and Whiskers vs Violin Plot]({{ site.url }}/img/violin-plot/violin-plot-vs-boxplot.jpg)
 
 
