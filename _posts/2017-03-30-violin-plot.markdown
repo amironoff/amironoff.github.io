@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Visualizing data with Violin Plots"
+title: "Visualizing data with Violin Plots and Python"
 excerpt: "Say you are analyzing customer churn of a telecom operator. You want to visualize the distribution 
 of total phone call length across those customers who stayed and those who didn't.
 The good old Box and Whisker plot might do the trick. But it has its downsides - it hides the probability density of the variable. 
@@ -24,7 +24,7 @@ Can we do better?
 A violin plot allows displaying _both_ distribution _and_ probability density of a numerical variable. It's a combo of a Box Plot and a Density Plot that is rotated to show data distribution [[1]].
 
 
-## A Python example
+## An example in Python
 
 Let's plot an example using Python, Jupyter, Pandas [[2]] and Seaborn [[3]]. We'll take this [[4]] telecom churn dataset
 and plot `total day minutes` against the target variable. Let's build both a box plot and a violin plot side-by-side,
