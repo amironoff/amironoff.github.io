@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Solved: Azure Storage Library for Python returns Not Found"
-excerpt: "The problem: Using the Azure Storage Library for Python
-I could list blob contents, but downloading them would fail with `Resource not found`, although the file was there with right permissions in place. TLDR: generate a SAS url + use urllib."
+excerpt: "A recent case: Using the Azure Storage Library for Python
+I could list blob contents, but downloading them would fail with `Resource not found`. The files were there with right permissions in place. TLDR: generate a SAS url + use urllib."
 category: Azure
 tags: [python, azure-blob-storage, sas-token]
 comments: true
@@ -19,6 +19,10 @@ A shared access signature (SAS) is
  a way to grant limited access to your storage account,
   without exposing your account key [[2]]. Among other things, you can use
   SAS to generate an access url to a certain file. To do so, you use the format `http://{storageaccounturl.com}/{container name}/{blob name}?{SAS token}`
+
+Interestingly, the Azure Storage SDK also supports blob access with SAS tokens. I tried downloading
+the file using the raw SAS-based URL in the browser and succeeded. Then tried the same thing
+using the SDK and failed. So I figured that the way around this is going back to the basics.
 
 ## Downloading blobs with Python
 The example below assumes using local Azure Storage emulator.
@@ -38,6 +42,10 @@ The example below assumes using local Azure Storage emulator.
         urlretrieve(blob_uri, local_path)
 {% endhighlight %}
 
+## Conclusion
+
+SDKs are great because they usually save us a lot of effort. Except when they don't work :) In such cases
+it's useful to know your options, understand the hidden technology layers and, when necessary, go down a level to solve the task in time.
 
 [1]: https://github.com/Azure/azure-storage-python
 [2]: https://docs.microsoft.com/en-us/azure/storage/common/storage-dotnet-shared-access-signature-part-1
