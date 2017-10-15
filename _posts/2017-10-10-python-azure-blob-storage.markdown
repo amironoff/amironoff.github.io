@@ -18,9 +18,7 @@ I could list blob contents, but downloading them would fail with `Resource not f
 A shared access signature (SAS) is
  a way to grant limited access to your storage account,
   without exposing your account key [[2]]. Among other things, you can use
-  SAS to generate an access url to a certain file. 
-
-  To do so, you use the format `http://{storageaccounturl.com}/{container name}/{blob name}?{SAS token}`
+  SAS to generate an access url to a certain file. To do so, you use the format `http://{storageaccounturl.com}/{container name}/{blob name}?{SAS token}`
 
 ## Downloading blobs with Python
 The example below assumes using local Azure Storage emulator.
