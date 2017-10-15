@@ -18,7 +18,13 @@ I could list blob contents, but downloading them would fail with `Resource not f
 A shared access signature (SAS) is
  a way to grant limited access to your storage account,
   without exposing your account key [[2]]. Among other things, you can use
-  SAS to generate an access url to a certain file. To do so, you use the format `http://{storageaccounturl.com}/{container name}/{blob name}?{SAS token}`
+  SAS to generate an access url to a certain file. To do so, you use the following format:
+  
+{% highlight python %}
+
+   http://{storageaccounturl.com}/{container name}/{blob name}?{SAS token}
+
+{% endhighlight %}
 
 Interestingly, the Azure Storage SDK also supports blob access with SAS tokens. I tried downloading
 the file using the raw SAS-based URL in the browser and succeeded. Then tried the same thing
@@ -45,7 +51,7 @@ The example below assumes using local Azure Storage emulator.
 ## Conclusion
 
 SDKs are great because they usually save us a lot of effort. Except when they don't work :) In such cases
-it's useful to know your options, understand the hidden technology layers and, when necessary, go down a level to solve the task in time.
+it's useful to know your options, understand the hidden technology layers and, when necessary, go down a level to solve the task on time.
 
 [1]: https://github.com/Azure/azure-storage-python
 [2]: https://docs.microsoft.com/en-us/azure/storage/common/storage-dotnet-shared-access-signature-part-1
