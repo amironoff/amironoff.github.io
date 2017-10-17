@@ -10,7 +10,7 @@ image:
   feature: python-blob/cover.jpg
 ---
 The usual way to make large files available to an Azure Cloud Service is to put them into blob storage and then 
-cache in the local storage of the VM. I recently had to do it for a Python 3.6-based service. Using the Azure Storage Library for Python [[1]]
+cache in the local storage of the VM. I recently had to do it for a Python 3.6-based service that relied on a couple of ~2GB machine learning models. Using the Azure Storage Library for Python [[1]]
 I could list blob contents, but downloading them would fail with `Resource not found`, although the file was there with right permissions in place.
 
 ## Shared access signature (SAS)
@@ -26,9 +26,8 @@ A shared access signature (SAS) is
 
 {% endhighlight %}
 
-Interestingly, the Azure Storage SDK also supports blob access with SAS tokens. I tried downloading
-the file using the raw SAS-based URL in the browser and succeeded. Then tried the same thing
-using the SDK and failed. So I figured that the way around this is going back to the basics.
+After failing to access blob storage, using the SDK, I tried downloading the file using the raw SAS-based URL in the browser and succeeded.
+So I figured that the way around this is going back to the basics.
 
 ## Downloading blobs with Python
 The example below assumes using local Azure Storage emulator.
@@ -51,7 +50,7 @@ The example below assumes using local Azure Storage emulator.
 ## Conclusion
 
 SDKs are great because they usually save us a lot of effort. Except when they don't work :) In such cases
-it's useful to know your options, understand the hidden technology layers and, when necessary, go down a level to solve the task on time.
+it's useful to know your options and, if necessary, go down a level to solve the task on time.
 
 [1]: https://github.com/Azure/azure-storage-python
 [2]: https://docs.microsoft.com/en-us/azure/storage/common/storage-dotnet-shared-access-signature-part-1
