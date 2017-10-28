@@ -6,7 +6,7 @@
 title:       "Andrey codes. Sometimes he writes about it."
 description: 'Insights in .NET, machine learning and software product development.'
 # the base hostname & protocol for your site
-url:         https://amironoff.github.io
+url:         http://andrey.codes
 
 #
 ###################################
