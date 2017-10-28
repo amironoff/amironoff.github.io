@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Visualizing data with Violin Plots and Python"
+title: "Example: Violin Plots and Python for data visualization"
 excerpt: "Say you are analyzing customer churn of a telecom operator. You want to visualize the distribution 
 of total phone call length across those customers who stayed and those who didn't.
 The good old Box and Whisker plot might do the trick. But it has its downsides - it hides the probability density of the variable. 
